@@ -2,7 +2,8 @@
 // get class load-animation-play-button
 // if #input-animation-loader" is checked add the class animations-play-button to ".load-animation-play-button"
 
-document.getElementById('input-animation-loader').addEventListener('change', function() {
+
+document.getElementById('input-animation-loader').addEventListener('change', function () {
     if (this.checked) {
         document.querySelector('.load-animation-play-button').classList.add('animations-play-button');
 
@@ -15,9 +16,18 @@ document.getElementById('input-animation-loader').addEventListener('change', fun
 
             setTimeout(() => {
                 document.querySelector('.heart-container-one').style.opacity = 0;
-                document.querySelector('.heart-container-two').style.opacity = 0;
-                document.querySelector('.heart-container-two').style.opacity = 0;
-                document.querySelector('.heart-container-two').style.opacity = 0;
+                setTimeout(() => {
+                    document.querySelector('.heart-container-two').style.opacity = 0;
+                }, 50);
+                setTimeout(() => {
+                    document.querySelector('.heart-container-two').style.opacity = 0;
+                }, 100);
+                setTimeout(() => {
+                    document.querySelector('.heart-container-two').style.opacity = 0;
+                }, 150);
+
+
+
 
                 setTimeout(() => {
                     document.querySelector('#container').style.opacity = 0;
@@ -29,7 +39,7 @@ document.getElementById('input-animation-loader').addEventListener('change', fun
 
         }, 1200);
 
-    
+
     }
 });
 
@@ -50,23 +60,23 @@ function insertHeartContainers() {
     setTimeout(() => {
         container.appendChild(createHeartContainer('heart-container-one'));
         setTimeout(() => {
-        document.querySelector('.heart-container-one').style.opacity = 1;
+            document.querySelector('.heart-container-one').style.opacity = 1;
         }, 600);
         setTimeout(() => {
             container.appendChild(createHeartContainer('heart-container-two'));
             setTimeout(() => {
                 document.querySelector('.heart-container-two').style.opacity = 1;
-                }, 600);
+            }, 600);
             setTimeout(() => {
                 container.appendChild(createHeartContainer('heart-container-three'));
                 setTimeout(() => {
                     document.querySelector('.heart-container-three').style.opacity = 1;
-                    }, 600);
+                }, 600);
                 setTimeout(() => {
                     container.appendChild(createHeartContainer('heart-container-four'));
                     setTimeout(() => {
                         document.querySelector('.heart-container-four').style.opacity = 1;
-                        }, 600);
+                    }, 600);
                 }, 450);
             }, 450);
         }, 450);
