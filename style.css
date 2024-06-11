@@ -172,6 +172,36 @@ html {
     border-radius: 10px;
 }
 
+.container-txt{
+    position: absolute;
+    margin-top: -25vh;
+    font-size: 3.5vh;
+    font-weight: 600;
+    color: var(--cerise-red-500);
+    animation: text-animation 2s infinite ease alternate;;
+}
+
+.disapear{
+    animation: disapear .5s ease forwards;
+}
+
+@keyframes disapear {
+    to {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes text-animation {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .5;
+    }
+}
+
 .load-animation-play-button {
     width: 100px;
     height: 100px;

@@ -1,13 +1,10 @@
-// get id checkbox
-// get class load-animation-play-button
-// if #input-animation-loader" is checked add the class animations-play-button to ".load-animation-play-button"
-
 
 document.getElementById('input-animation-loader').addEventListener('change', function () {
     if (this.checked) {
         document.querySelector('.load-animation-play-button').classList.add('animations-play-button');
 
         setTimeout(() => {
+            document.querySelector('.container-txt').classList.add('disapear');
             document.querySelector('.animations-play-button').style.opacity = 0;
 
             setTimeout(() => {
